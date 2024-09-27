@@ -57,26 +57,3 @@ class ToiCal:
         file = open(os.path.join(directory, f'{self.cal_name}.ics'), 'wb')
         file.write(self.cal.to_ical())
         file.close()
-
-to_iCalendar = ToiCal('Mein Probenplan')
-
-# event_name, description, date_start[], date_end[], place
-event_name = 'Franz'
-event_description = 'Franz Test xy'
-date_start = [2024, 9, 27, 11, 0, 0]
-date_end = [2024, 9, 27, 15, 0, 0]
-place = 'Zimmer xy'
-
-to_iCalendar.createAndAddEvent(event_name, event_description, date_start, date_end, place)
-to_iCalendar.saveEvent()
-
-e = open('Mein Probenplan/Mein Probenplan.ics', 'rb')
-ecal = Calendar.from_ical(e.read())
-for component in ecal.walk():
-    if component.name == "VEVENT":
-        print(component.get("summary"))
-        print(component.get("description"))
-        print(component.get("location"))
-        print(component.decoded("dtstart"))
-        print(component.decoded("dtend"))
-e.close()
