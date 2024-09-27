@@ -30,15 +30,13 @@ class ToiCal:
         
         event = Event()
         
-        event.add('name', event_name)
+        event.add('summary', event_name)
         event.add('description', description)
                                     # yyyy, mm, dd, hh, mm, ss
         event.add('dtstart', datetime(date_start[0], date_start[1], date_start[2], \
-                                      date_start[3], date_start[4], date_start[5], \
-                                      tzinfo = pytz.utc))
+                                      date_start[3], date_start[4], date_start[5]))
         event.add('dtend', datetime(date_end[0], date_end[1], date_end[2], \
-                                      date_end[3], date_end[4], date_end[5], \
-                                      tzinfo = pytz.utc))
+                                      date_end[3], date_end[4], date_end[5]))
                                       # can tzinfo = pytz.utc be left out?
         event['location'] = vText(place)
         
@@ -69,11 +67,16 @@ date_start = [2024, 9, 27, 11, 0, 0]
 date_end = [2024, 9, 27, 15, 0, 0]
 place = 'Zimmer xy'
 
-to_iCalendar.createAndAddEvent
+to_iCalendar.createAndAddEvent(event_name, event_description, date_start, date_end, place)
 to_iCalendar.saveEvent()
 
 e = open('Mein Probenplan/Mein Probenplan.ics', 'rb')
 ecal = Calendar.from_ical(e.read())
 for component in ecal.walk():
-   print(component.name)
+    if component.name == "VEVENT":
+        print(component.get("summary"))
+        print(component.get("description"))
+        print(component.get("location"))
+        print(component.decoded("dtstart"))
+        print(component.decoded("dtend"))
 e.close()
