@@ -50,9 +50,9 @@ class ToiCal:
         try:
             directory.mkdir(parents = True, exist_ok = False)
         except FileExistsError:
-            print("Folder already exists")
+            print("All done.")
         else:
-            print("Folder was created")
+            print("New folder created, all done.")
             
         file = open(os.path.join(directory, f'{self.cal_name}.ics'), 'wb')
         file.write(self.cal.to_ical())
