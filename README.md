@@ -7,3 +7,4 @@ Ein Skript, das nicht wirklich nötig, aber cool, ist.
 - pathlib:	https://docs.python.org/3/library/pathlib.html
 - datetime:	https://docs.python.org/3/library/datetime.html
 - os:	https://docs.python.org/3/library/os.html
+- selenium:	
