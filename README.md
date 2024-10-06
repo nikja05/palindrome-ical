@@ -8,3 +8,4 @@ Ein Skript, das nicht wirklich nötig, aber cool, ist.
 - datetime:	https://docs.python.org/3/library/datetime.html
 - os:	https://docs.python.org/3/library/os.html
 - selenium:	
+- bs4
