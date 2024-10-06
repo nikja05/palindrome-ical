@@ -1,4 +1,5 @@
 import time
+import bs4
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -25,6 +26,12 @@ class GetHtml:
         self.pwd = password
         
         self.browser = webdriver.Chrome()
+    
+    def run(self):
+        self.login()
+        self.go_to_page('PROBENPLAN')
+        source_of_page = self.get_source()
+        return source_of_page
         
     def login(self):
         self.browser.get(self.url)
@@ -49,16 +56,18 @@ class GetHtml:
             field.send_keys(content)
             field.send_keys(Keys.RETURN)
         except:
-            print('Damn. While filling out the login field, something failed. \n Please tell Nikolaj about this.')
+            print('Damn. While filling out the login field, something failed. \n Please tell Nikolaj about this. \n Try again maybe?')
     
     def go_to_page(self, page_name):
         WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.LINK_TEXT, page_name)))
         link = self.browser.find_element(By.LINK_TEXT, page_name)
         link.click()
         
+    def get_source(self):
+        return self.browser.page_source
+        
 getit = GetHtml(URL, USERNAME, PASSWORD)
-getit.login()
-getit.go_to_page('PROBENPLAN')
+HTML = getit.run()
 
 # TODO: make exams actually load
 # TODO: replace dirty way of pausing with webdriverwait
