@@ -5,10 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-URL = 'https://intern.gymkirchenfeld.ch/myregister'
-USERNAME = 'nikolaj.veljkovic@mygymer.ch'
-PASSWORD = 'W1rs1ndd0ch4lle'
-
 class GetHtml:
     
     """
@@ -19,17 +15,17 @@ class GetHtml:
     fill_field()
     """
     
-    def __init__(self, url, username, password):
+    def __init__(self):        
+        self.browser = webdriver.Chrome()
+    
+    def run(self, url, username, password):
         self.url = url
         self.uname = username
         self.pwd = password
         
-        self.browser = webdriver.Chrome()
-    
-    def run(self):
         self.login()
         self.go_to_page('PROBENPLAN')
-        source_of_page = self.get_source()
+        source_of_page = self.get_source('.danger')
         return source_of_page
         
     def login(self):
@@ -47,6 +43,7 @@ class GetHtml:
         """
         try:
             # buffer because button gets clicked before it shows
+            # the div is hidden in the source, webdriverwait doesn't understand
             time.sleep(2)
             # wait for element to load
             WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.ID, element_id)))
@@ -58,15 +55,14 @@ class GetHtml:
             print('Damn. While filling out the login field, something failed. \n Please tell Nikolaj about this. \n Try again maybe?')
     
     def go_to_page(self, page_name):
+        # waits until unique page name appears (probenplan)
         WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.LINK_TEXT, page_name)))
         link = self.browser.find_element(By.LINK_TEXT, page_name)
         link.click()
         
-    def get_source(self):
+    def get_source(self, unique_selector):
+        # waits until unique event selector appears (only in exam div)
+        WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, unique_selector)))
         return self.browser.page_source
-        
-getit = GetHtml(URL, USERNAME, PASSWORD)
-HTML = getit.run()
 
-# TODO: make exams actually load
 # TODO: replace dirty way of pausing with webdriverwait

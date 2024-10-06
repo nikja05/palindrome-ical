@@ -7,8 +7,7 @@ class Setup:
     
     def install_packages(self, pckg_list):
         for pckg in pckg_list:
-            install(pckg)
-    
+            self.install(pckg)
+            
     def install(self, package):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-        
