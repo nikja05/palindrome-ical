@@ -1,5 +1,4 @@
 import time
-import bs4
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -47,10 +46,10 @@ class GetHtml:
         "Presses" Enter when finished
         """
         try:
-            # buffer because of COMPUTERSTOOFASTTT
+            # buffer because button gets clicked before it shows
             time.sleep(2)
             # wait for element to load
-            WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.ID, element_id)))
+            WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.ID, element_id)))
             # fill in the field
             field = self.browser.find_element(By.ID, element_id)
             field.send_keys(content)
