@@ -1,6 +1,17 @@
 # palindrome-ical
 
-Ein Skript, das nicht wirklich nötig, aber cool, ist.
+Dieses Skript nimmt alle Proben aus dem Intern Probenplan und packt sie in eine iCal Datei.
+Du kannt diese iCal Datei dann in einen beliebigen Kalender laden.
+
+## Schritt 1 - Python herunterladen
+
+## Schritt 2 - main.py ausführen
+
+## .ical Datei in Kalender einfügen
+
+### iCloud
+
+### Google Kalender
 
 ## Gebrauchte Module und Link zur Dokumentation
 - icalendar:		https://icalendar.readthedocs.io/en/latest/
