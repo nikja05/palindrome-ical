@@ -16,7 +16,7 @@ class GetHtml:
     """
     
     def __init__(self):        
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Edge()
     
     def run(self, url, username, password):
         self.url = url
