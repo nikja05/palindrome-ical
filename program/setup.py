@@ -3,10 +3,10 @@ import sys
 
 class Setup:
     def __init__(self):
-        pass
+        self.__required_packages = ["beautifulsoup4", "selenium", "icalendar", "pathlib"]
     
-    def install_packages(self, pckg_list):
-        for pckg in pckg_list:
+    def install_packages(self):
+        for pckg in self.__required_packages:
             self.install(pckg)
             
     def install(self, package):

@@ -1,6 +1,5 @@
 from icalendar import Calendar, Event, vText
 from pathlib import Path
-from datetime import datetime
 import os
 
 class ToiCal:
@@ -26,19 +25,14 @@ class ToiCal:
         self.cal.add('prodid', f'-//{self.cal_name}//')
         self.cal.add('version', '2.0')
         
-    def createAndAddEvent(self, event_name, description, date_start, date_end, place):
+    def createAndAddEvent(self, event_name, description, date_start, date_end):
         
         event = Event()
         
         event.add('summary', event_name)
         event.add('description', description)
-                                    # yyyy, mm, dd, hh, mm, ss
-        event.add('dtstart', datetime(date_start[0], date_start[1], date_start[2], \
-                                      date_start[3], date_start[4], date_start[5]))
-        event.add('dtend', datetime(date_end[0], date_end[1], date_end[2], \
-                                      date_end[3], date_end[4], date_end[5]))
-                                      # can tzinfo = pytz.utc be left out?
-        event['location'] = vText(place)
+        event.add('dtstart', date_start)
+        event.add('dtend', date_end)
         
         # add event
         self.cal.add_component(event)
