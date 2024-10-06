@@ -1,4 +1,4 @@
-from icalendar import Calendar, Event, vText
+from icalendar import Calendar, Event
 from pathlib import Path
 import os
 

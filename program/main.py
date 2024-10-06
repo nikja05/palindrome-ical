@@ -9,8 +9,9 @@ setup.install_packages()
 get_HTML = GetHtml()
 
 URL = 'https://intern.gymkirchenfeld.ch/myregister'
-USERNAME = 'username'
-PASSWORD = 'password'
+with open('fill_this_out.txt', 'r') as data:
+    USERNAME = data.readline()[6:].strip()
+    PASSWORD = data.readline()[9:].strip()
 
 HTML_source = get_HTML.run(URL, USERNAME, PASSWORD)
 

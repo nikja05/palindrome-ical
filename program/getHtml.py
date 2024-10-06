@@ -46,13 +46,14 @@ class GetHtml:
             # the div is hidden in the source, webdriverwait doesn't understand
             time.sleep(2)
             # wait for element to load
-            WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.ID, element_id)))
+            WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.ID, element_id)))
             # fill in the field
             field = self.browser.find_element(By.ID, element_id)
             field.send_keys(content)
             field.send_keys(Keys.RETURN)
         except:
-            print('Damn. While filling out the login field, something failed. \n Please tell Nikolaj about this. \n Try again maybe?')
+            print('Damn. While filling out the login field, something failed. \n Please tell Nikolaj about this. \n \
+            Two possibilites: either something crashed, or you were already logged in and the program should have run smoothly anyways.')
     
     def go_to_page(self, page_name):
         # waits until unique page name appears (probenplan)
