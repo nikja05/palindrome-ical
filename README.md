@@ -18,7 +18,7 @@ Im Ordner [code](./code/) findest du die Datei main.py. Rechtsklick irgendwo im 
 Schreibe nun ```python main.py``` in die Kommandozeile (dort wo der Zeiger blink) und drücke Enter.
 Das Programm wird ausgeführt, folge den Anweisungen: Gib deine mygymer E-Mail, dein Passwort und dein Betriebssystem (MAC oder Windows) ein.
 
-Du wirst eine .ics Datei im Ordner [code/Mein Probenplan/](./code/Mein\ Probenplan/] finden. 
+Du wirst eine .ics Datei im Ordner [code/Mein Probenplan/](./code/Mein Probenplan/] finden. 
 
 ## Schritt 3 - .ics Datei in Kalender einfügen
 
