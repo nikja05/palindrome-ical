@@ -1,18 +1,17 @@
-from toiCal import ToiCal
-from getHtml import GetHtml
 from setup import Setup
-from parse_and_assign import Parse_and_assign as paa
-
 setup = Setup()
 setup.install_packages()
 
-get_HTML = GetHtml()
+from toiCal import ToiCal
+from getHtml import GetHtml
+from parse_and_assign import Parse_and_assign as paa
 
 URL = 'https://intern.gymkirchenfeld.ch/myregister'
-with open('fill_this_out.txt', 'r') as data:
-    USERNAME = data.readline()[6:].strip()
-    PASSWORD = data.readline()[9:].strip()
+USERNAME = input('Deine mygymer E-Mail Adresse: ').strip()
+PASSWORD = input('Das Passwort dazu: ').strip()
+SYSTEM = input('Brauchst du MAC oder Windows? ').strip().lower()
 
+get_HTML = GetHtml(SYSTEM)
 HTML_source = get_HTML.run(URL, USERNAME, PASSWORD)
 
 p_a_a = paa(HTML_source)

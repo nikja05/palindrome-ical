@@ -15,8 +15,13 @@ class GetHtml:
     fill_field()
     """
     
-    def __init__(self):        
-        self.browser = webdriver.Edge()
+    def __init__(self, system):
+        if system == 'windows':
+            self.browser = webdriver.Edge()
+        elif system == 'mac':
+            self.broser = webdriver.Safari()
+        else:
+            raise Exception("windows oder mac. sonst geht's nicht.")
     
     def run(self, url, username, password):
         self.url = url

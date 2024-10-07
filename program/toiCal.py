@@ -38,16 +38,7 @@ class ToiCal:
         self.cal.add_component(event)
         
     def saveEvent(self):
-        
-        directory = Path.cwd() / f'{self.cal_name}'
-        
-        try:
-            directory.mkdir(parents = True, exist_ok = False)
-        except FileExistsError:
-            print("All done.")
-        else:
-            print("New folder created, all done.")
             
-        file = open(os.path.join(directory, f'{self.cal_name}.ics'), 'wb')
+        file = open(f'Mein Probenplan/{self.cal_name}.ics', 'wb')
         file.write(self.cal.to_ical())
         file.close()
