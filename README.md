@@ -18,7 +18,7 @@ Im Ordner [code](./code/) findest du die Datei main.py. Rechtsklick irgendwo im 
 Schreibe nun ```python main.py``` in die Kommandozeile (dort wo der Zeiger blink) und drücke Enter.
 Das Programm wird ausgeführt, folge den Anweisungen: Gib deine mygymer E-Mail, dein Passwort und dein Betriebssystem (MAC oder Windows) ein.
 
-Du wirst eine .ics Datei im Ordner [code/Mein Probenplan/](./code/Mein\ Probenplan/) finden. 
+Du wirst eine .ics Datei im Ordner [code/Mein Probenplan/](./code/Mein%20Probenplan) finden. 
 
 ## Schritt 3 - .ics Datei in Kalender einfügen
 
@@ -28,7 +28,7 @@ Du wirst eine .ics Datei im Ordner [code/Mein Probenplan/](./code/Mein\ Probenpl
 1. Melde dich an im [Google Kalender](https://calendar.google.com/).
 2. Drücke auf das Zahnrad in der oberen Leiste, danach 'Einstellungen'.
 3. Drücke auf 'Importieren & Exportieren'
-4. Du kannst nun die .ics Datei aus dem Ordner [Mein Probenplan/](./code/Mein\ Probenplan/) auswählen und somit den Kalender importieren.
+4. Du kannst nun die .ics Datei aus dem Ordner [Mein Probenplan/](./code/Mein%20Probenplan/) auswählen und somit den Kalender importieren.
 
 ## Gebrauchte Module und Link zur Dokumentation
 - [icalendar](https://icalendar.readthedocs.io/en/latest/)
