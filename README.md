@@ -7,7 +7,10 @@ Du kannt diese iCal Datei dann in einen beliebigen Kalender laden.
 Unter https://www.python.org/downloads/ findest du die Downloads für Python.
 
 ## Schritt 2 - main.py vorbereiten und ausführen
-Im Ordner [program](./program/) findest du die Datei main.py. Rechtsklick irgendwo im Ordner und wähle 'im Terminal öffnen'. \n Schreibe nun ```python main.py``` in die Kommandozeile und drücke Enter.
+Im Ordner [program](./program/) findest du die Datei main.py. Rechtsklick irgendwo im Ordner und wähle 'im Terminal öffnen'. 
+
+
+Schreibe nun ```python main.py``` in die Kommandozeile und drücke Enter.
 Das Programm funktioniert, folge den Anweisungen.
 
 ## Schritt 3 - .ical Datei in Kalender einfügen
