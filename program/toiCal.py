@@ -1,6 +1,4 @@
 from icalendar import Calendar, Event
-from pathlib import Path
-import os
 
 class ToiCal:
     """Creates and adds events to iCal in a concise manner
