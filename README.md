@@ -20,9 +20,7 @@ Das Programm funktioniert, folge den Anweisungen.
 ### Google Kalender
 
 ## Gebrauchte Module und Link zur Dokumentation
-- icalendar:		https://icalendar.readthedocs.io/en/latest/
-- pathlib:		https://docs.python.org/3/library/pathlib.html
-- datetime:		https://docs.python.org/3/library/datetime.html
-- os:			https://docs.python.org/3/library/os.html
-- selenium:		
-- beautifulsoup4:	
+- [icalendar](https://icalendar.readthedocs.io/en/latest/)
+- [datetime](https://docs.python.org/3/library/datetime.html)
+- [selenium](https://selenium-python.readthedocs.io/)
+- [beautifulsoup4](https://beautiful-soup-4.readthedocs.io/en/latest/)	
