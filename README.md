@@ -4,14 +4,14 @@ Dieses Skript nimmt alle Proben aus dem Intern Probenplan und packt sie in eine 
 Du kannt diese iCal Datei dann in einen beliebigen Kalender laden.
 
 ## Schritt 1 - Python herunterladen
-Unter https://www.python.org/downloads/ findest du die Downloads für Python.
+Unter https://www.python.org/downloads/ findest du das Programm um Python zu installieren.
 
 ## Schritt 2 - main.py ausführen
-Im Ordner [program](./program/) findest du die Datei main.py. Rechtsklick irgendwo im Ordner und wähle 'im Terminal öffnen'. 
+Im Ordner [code](./code/) findest du die Datei main.py. Rechtsklick irgendwo im Ordner und wähle 'im Terminal öffnen'. Ein neues Fenster öffnet sich, dies ist das Terminal. 
 
 
-Schreibe nun ```python main.py``` in die Kommandozeile und drücke Enter.
-Das Programm funktioniert, folge den Anweisungen.
+Schreibe nun ```python main.py``` in die Kommandozeile (dort wo der Zeiger blink) und drücke Enter.
+Das Programm wird ausgeführt, folge den Anweisungen: Gib deine mygymer E-Mail, dein Passwort und dein Betriebssystem (MAC oder Windows) ein.
 
 ## Schritt 3 - .ical Datei in Kalender einfügen
 
