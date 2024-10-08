@@ -2,6 +2,8 @@
 Dieses Skript nimmt alle Proben aus dem Intern Probenplan und packt sie in eine iCal Datei.
 Du kannt diese iCal Datei dann in einen beliebigen Kalender laden.
 
+schritt0-schritt2.mp4 ist ein Videotutorial.
+
 ## Schritt 0 - Den Code speichern.
 Über den Dateien findest du einen grünen Knopf: 'Code'. Wenn du draufdrückst, gibt es die Möglichkeit, alles als .zip Datei herunterzuladen (unterster Knopf). Speichere die Datei am besten im Ordner 'Desktop'.
 
